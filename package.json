@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-webserver": "^0.9.1",
+		"prettier": "^2.5.1",
+		"sass": "^1.45.1"
+	}
+}
