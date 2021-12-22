@@ -101,6 +101,9 @@
   display: none;
   &--open {
     display: flex;
+    @include tablet {
+      display: none;
+    }
   }
 
   &__links {
