@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+.home {
+  padding: 0 $mobile-spacing;
+  @include tablet {
+    padding: 0 $tablet-spacing;
+  }
+  @include desktop {
+    padding: 0 $desktop-spacing;
+  }
+}
+
+.hero {
+  height: 40rem;
+  border-radius: 1rem;
+  background-color: grey;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  @include tablet {
+    padding: 2rem;
+    height: 35rem;
+  }
+  @include desktop {
+    height: 45rem;
+  }
+
+  .intro {
+    font-size: 1.4rem;
+    @include desktop {
+      font-size: 1.6rem;
+    }
+  }
+
+  .title {
+    font-size: 2.6rem;
+    @include tablet {
+      font-size: 3.2rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+    }
+  }
+
+  &__btn {
+    padding: 1rem;
+    background-color: $primary-color;
+    border-radius: 0.5rem;
+    color: white;
+    width: 50%;
+    text-align: center;
+    margin-top: 2rem;
+    @include tablet {
+      width: 30%;
+      font-size: 1.4rem;
+      border-radius: 5rem;
+    }
+    @include desktop {
+      width: 25%;
+    }
+  }
+}

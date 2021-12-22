@@ -1,0 +1,78 @@
+.home {
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .home {
+    padding: 0 8%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .home {
+    padding: 0 10%;
+  }
+}
+
+.hero {
+  height: 40rem;
+  border-radius: 1rem;
+  background-color: grey;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 2rem;
+    height: 35rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero {
+    height: 45rem;
+  }
+}
+.hero .intro {
+  font-size: 1.4rem;
+}
+@media only screen and (min-width: 992px) {
+  .hero .intro {
+    font-size: 1.6rem;
+  }
+}
+.hero .title {
+  font-size: 2.6rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero .title {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero .title {
+    font-size: 4rem;
+  }
+}
+.hero__btn {
+  padding: 1rem;
+  background-color: #6f00ff;
+  border-radius: 0.5rem;
+  color: white;
+  width: 50%;
+  text-align: center;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero__btn {
+    width: 30%;
+    font-size: 1.4rem;
+    border-radius: 5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero__btn {
+    width: 25%;
+  }
+}

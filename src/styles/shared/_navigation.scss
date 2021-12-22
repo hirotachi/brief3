@@ -1,19 +1,21 @@
 @use "../abstracts/index" as *;
 
 .nav {
-  padding: 1rem;
+  padding: 1rem $mobile-spacing;
   background-color: $primary-bg;
   color: white;
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
   @include tablet {
+    padding: 1rem $tablet-spacing;
     justify-content: space-between;
     background-color: transparent;
     color: $primary-text-color;
-    padding: 1rem 7%;
   }
   @include desktop {
+    padding: 1rem $desktop-spacing;
     margin-top: 1rem;
   }
 
@@ -68,9 +70,9 @@
   .reserve {
     display: none;
     background-color: $primary-color;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     text-transform: capitalize;
-    border-radius: 0.2rem;
+    border-radius: 5rem;
     font-size: 1.4rem;
     color: white;
     transition: all 0.2s ease;
@@ -127,7 +129,7 @@
     padding: 1rem;
     background-color: $secondary-bg;
     color: $primary-text-color;
-    border-radius: 0.5rem;
+    border-radius: 5rem;
     width: 50%;
     text-align: center;
     text-transform: capitalize;
