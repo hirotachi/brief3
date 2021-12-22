@@ -1,4 +1,142 @@
 @use "../abstracts/index" as *;
 
 .nav {
+  padding: 1rem;
+  background-color: $primary-bg;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    justify-content: space-between;
+    background-color: transparent;
+    color: $primary-text-color;
+    padding: 1rem 7%;
+  }
+  @include desktop {
+    margin-top: 1rem;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .logo {
+    margin-right: auto;
+    font-weight: 900;
+    @include tablet {
+      margin: 0;
+    }
+    @include desktop {
+      font-size: 1.8rem;
+    }
+  }
+
+  .links {
+    display: none;
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    .link {
+      transition: all 0.2s ease;
+      font-weight: bold;
+      &:hover {
+        color: $primary-color;
+      }
+
+      &:before {
+        margin: 0 1rem;
+        content: ".";
+        font-size: 2rem;
+      }
+
+      &:first-of-type {
+        &:before {
+          content: "";
+        }
+      }
+    }
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  .reserve {
+    display: none;
+    background-color: $primary-color;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+    color: white;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+    @include tablet {
+      display: inline-block;
+    }
+    @include desktop {
+      padding: 1rem 3rem;
+      font-weight: bold;
+    }
+  }
+}
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary-bg;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  display: none;
+  &__links {
+    list-style: none;
+    font-size: 3rem;
+    margin-top: 40%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+  }
+
+  .btn {
+    margin-top: auto;
+    padding: 1rem;
+    background-color: $secondary-bg;
+    color: $primary-text-color;
+    border-radius: 0.5rem;
+    width: 50%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.open {
+  font-size: 2rem;
+  @include tablet {
+    display: none;
+  }
 }

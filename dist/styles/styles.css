@@ -14,3 +14,147 @@ body {
   font-family: Roboto, Arial, sans-serif, Serif;
   margin-bottom: 5rem;
 }
+
+.nav {
+  padding: 1rem;
+  background-color: #000;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    justify-content: space-between;
+    background-color: transparent;
+    color: #22211f;
+    padding: 1rem 7%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav {
+    margin-top: 1rem;
+  }
+}
+.nav a {
+  color: currentColor;
+  text-decoration: none;
+}
+.nav .logo {
+  margin-right: auto;
+  font-weight: 900;
+}
+@media only screen and (min-width: 768px) {
+  .nav .logo {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav .logo {
+    font-size: 1.8rem;
+  }
+}
+.nav .links {
+  display: none;
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.nav .links .link {
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+.nav .links .link:hover {
+  color: #6f00ff;
+}
+.nav .links .link:before {
+  margin: 0 1rem;
+  content: ".";
+  font-size: 2rem;
+}
+.nav .links .link:first-of-type:before {
+  content: "";
+}
+@media only screen and (min-width: 768px) {
+  .nav .links {
+    display: flex;
+  }
+}
+.nav .reserve {
+  display: none;
+  background-color: #6f00ff;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+.nav .reserve:hover {
+  background-color: #8c33ff;
+}
+@media only screen and (min-width: 768px) {
+  .nav .reserve {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav .reserve {
+    padding: 1rem 3rem;
+    font-weight: bold;
+  }
+}
+
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  display: none;
+}
+.mobile__links {
+  list-style: none;
+  font-size: 3rem;
+  margin-top: 40%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+.mobile__link {
+  transition: all 0.2s ease;
+}
+.mobile__link:hover {
+  color: #6f00ff;
+}
+.mobile .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+.mobile .btn {
+  margin-top: auto;
+  padding: 1rem;
+  background-color: #fff;
+  color: #22211f;
+  border-radius: 0.5rem;
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.open {
+  font-size: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .open {
+    display: none;
+  }
+}
