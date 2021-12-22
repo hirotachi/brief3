@@ -11,9 +11,15 @@
 }
 
 .hero {
+  $overlay: rgba(black, 0.2);
+  background: linear-gradient(0deg, $overlay, $overlay),
+    url("../../assets/home-bg-1.jpg");
+  background-position: center;
+  text-shadow: 0 1px 5px rgba(black, 0.2);
+  background-size: cover;
   height: 40rem;
   border-radius: 1rem;
-  background-color: grey;
+  color: $secondary-bg;
   text-transform: capitalize;
   display: flex;
   align-items: center;
@@ -56,9 +62,11 @@
     text-align: center;
     margin-top: 2rem;
     transition: all 0.2s ease;
+
     &:hover {
       background-color: darken($primary-color, 10%);
     }
+
     @include tablet {
       width: 30%;
       font-size: 1.4rem;

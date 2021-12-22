@@ -13,9 +13,13 @@
 }
 
 .hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/home-bg-1.jpg");
+  background-position: center;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  background-size: cover;
   height: 40rem;
   border-radius: 1rem;
-  background-color: grey;
+  color: #fff;
   text-transform: capitalize;
   display: flex;
   align-items: center;
