@@ -99,6 +99,10 @@
   flex-direction: column;
   padding-bottom: 3rem;
   display: none;
+  &--open {
+    display: flex;
+  }
+
   &__links {
     list-style: none;
     font-size: 3rem;
