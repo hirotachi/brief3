@@ -19,8 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/layout/home.css" />
-    <title>RentMeNow</title>
+    <link rel="stylesheet" href="styles/layout/contact.css" />
+    <title>RentMeNow - Contact</title>
   </head>
   <body>
     <!--  header -->
@@ -44,55 +44,42 @@
       </div>
     </header>
     <!--  header -->
-
-    <main class="home">
-      <div class="hero">
-        <p class="intro">always the best prices and best equipment</p>
-        <h1 class="title">Rent Your Car right now</h1>
-        <span class="hero__btn">book Now</span>
-      </div>
-      <div class="cars">
-        <p class="cars__title">Our <span>Vehicles</span></p>
-        <div class="cars__list">
-          <div class="car">
-            <div class="preview">
-              <img src="assets/cars/id3.png" alt="id3" />
-            </div>
-            <p class="type">type</p>
-            <p class="name">name</p>
-            <p class="price">price for a day</p>
-            <a href="gallery.html" class="fetch">book now</a>
-          </div>
-          <div class="car">
-            <div class="preview">
-              <img src="assets/cars/id3.png" alt="id3" />
-            </div>
-            <p class="type">type</p>
-            <p class="name">name</p>
-            <p class="price">price for a day</p>
-            <a href="gallery.html" class="fetch">book now</a>
-          </div>
-          <div class="car">
-            <div class="preview">
-              <img src="assets/cars/id3.png" alt="id3" />
-            </div>
-            <p class="type">type</p>
-            <p class="name">name</p>
-            <p class="price">price for a day</p>
-            <a href="gallery.html" class="fetch">book now</a>
-          </div>
-          <div class="car">
-            <div class="preview">
-              <img src="assets/cars/id3.png" alt="id3" />
-            </div>
-            <p class="type">type</p>
-            <p class="name">name</p>
-            <p class="price">price for a day</p>
-            <a href="gallery.html" class="fetch">book now</a>
-          </div>
-        </div>
-        <a href="gallery.html" class="cars__more">see more</a>
-      </div>
+    <main class="contact">
+      <h1>Contact us</h1>
+      <form>
+        <label for="name"
+          ><span>name</span
+          ><input placeholder="your name" type="name" name="name" id="name"
+        /></label>
+        <label for="email"
+          ><span>Your email</span
+          ><input
+            required
+            placeholder="email@example"
+            type="email"
+            name="name"
+            id="email"
+        /></label>
+        <label for="subject"
+          ><span>Subject</span
+          ><input
+            type="text"
+            placeholder="what is this about?"
+            name="name"
+            id="subject"
+        /></label>
+        <label for="message">
+          <span>Message</span>
+          <textarea
+            placeholder="what's on your mind?"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </label>
+        <button type="submit">send</button>
+      </form>
     </main>
     <!--  footer -->
     <footer class="footer">
