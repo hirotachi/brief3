@@ -49,10 +49,16 @@
     padding: 1rem;
     background-color: $primary-color;
     border-radius: 0.5rem;
+    cursor: pointer;
     color: white;
+    font-weight: bold;
     width: 50%;
     text-align: center;
     margin-top: 2rem;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
     @include tablet {
       width: 30%;
       font-size: 1.4rem;
@@ -60,6 +66,121 @@
     }
     @include desktop {
       width: 25%;
+    }
+  }
+}
+
+.cars {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  &__more {
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: $primary-color;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+    text-transform: capitalize;
+    align-self: center;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+    @include desktop {
+      width: 20%;
+    }
+  }
+
+  &__list {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .car {
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+
+      .preview {
+        width: 16rem;
+        height: 10rem;
+        @include tablet {
+          width: 18rem;
+          height: 12rem;
+        }
+        @include desktop {
+          width: 22rem;
+          height: 15rem;
+        }
+
+        img {
+          @include size(100%);
+          object-fit: contain;
+        }
+      }
+
+      .type {
+        opacity: 0.8;
+        font-weight: bold;
+      }
+
+      .name {
+        font-weight: 900;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+      }
+
+      .price {
+      }
+
+      .fetch {
+        padding: 0.5rem 1rem;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        transition: all 0.2s ease;
+        border-radius: 0.5rem;
+        width: fit-content;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        text-transform: capitalize;
+        @include desktop {
+          margin-top: 1rem;
+        }
+
+        &:hover {
+          color: white;
+          background-color: $primary-color;
+        }
+      }
     }
   }
 }
