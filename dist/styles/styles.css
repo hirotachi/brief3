@@ -128,6 +128,11 @@ body {
 .mobile--open {
   display: flex;
 }
+@media only screen and (min-width: 768px) {
+  .mobile--open {
+    display: none;
+  }
+}
 .mobile__links {
   list-style: none;
   font-size: 3rem;
