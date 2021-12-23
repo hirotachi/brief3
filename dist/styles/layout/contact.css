@@ -60,6 +60,7 @@ form label input:focus {
   outline: none;
 }
 form label textarea {
+  border: 1px solid rgba(34, 33, 31, 0.2);
   padding: 1rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
