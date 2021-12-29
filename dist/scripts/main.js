@@ -10,3 +10,5 @@ const handeNavClick = (e) => {
 
 navCloseBtn.addEventListener("click", handeNavClick);
 navOpenBtn.addEventListener("click", handeNavClick);
+
+
