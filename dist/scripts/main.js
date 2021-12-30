@@ -19,7 +19,7 @@ const optionsPercentage = {
   automatic: 19,
 };
 
-const vehicles = {
+const types = {
   compact: {
     manual: true,
     essence: true,
@@ -67,3 +67,13 @@ const citadine = [
   { name: "500e cabriolet", model: "fiat" },
   { name: "A1 Sportback", model: "AUDI" },
 ];
+
+const vehicles = {
+  moto,
+  citadine,
+  compact,
+  berline,
+  edc,
+  camion,
+  utilitaire,
+};
