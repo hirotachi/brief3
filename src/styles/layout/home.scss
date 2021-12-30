@@ -2,13 +2,7 @@
 @use "../components/car";
 
 .home {
-  padding: 0 $mobile-spacing;
-  @include tablet {
-    padding: 0 $tablet-spacing;
-  }
-  @include desktop {
-    padding: 0 $desktop-spacing;
-  }
+  @include normalizePadding;
 }
 
 .hero {

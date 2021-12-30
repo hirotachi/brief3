@@ -1,0 +1,5 @@
+@use "../abstracts" as *;
+
+.reserve {
+  @include normalizePadding;
+}

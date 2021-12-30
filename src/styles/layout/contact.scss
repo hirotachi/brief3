@@ -1,13 +1,7 @@
 @use "../abstracts" as *;
 
 .contact {
-  padding: 0 $mobile-spacing;
-  @include tablet {
-    padding: 0 $tablet-spacing;
-  }
-  @include desktop {
-    padding: 0 $desktop-spacing;
-  }
+  @include normalizePadding;
   h1 {
     margin-bottom: 2rem;
     @include tablet {

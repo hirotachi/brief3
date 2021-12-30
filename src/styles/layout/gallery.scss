@@ -2,15 +2,10 @@
 @use "../components/car";
 
 .gallery {
-  padding: 0 $mobile-spacing;
+  @include normalizePadding;
   display: flex;
   flex-direction: column;
-  @include tablet {
-    padding: 0 $tablet-spacing;
-  }
-  @include desktop {
-    padding: 0 $desktop-spacing;
-  }
+
   &__intro {
     margin-bottom: 2rem;
     text-transform: capitalize;
