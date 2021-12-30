@@ -11,44 +11,47 @@
   @include desktop {
     padding: 0 $desktop-spacing;
   }
-  .intro {
+  &__intro {
     margin-bottom: 2rem;
     text-transform: capitalize;
     text-align: center;
+    @include desktop {
+      text-align: left;
+      font-size: 4rem;
+    }
     span {
       color: $primary-color;
     }
   }
-}
-
-.search {
-  border: 1px solid $border-color;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
-  @include desktop {
-    width: 30%;
-  }
-  i {
-    transition: color 0.2s ease;
-    opacity: 0.7;
-  }
-  input {
-    padding: 1rem;
-    border: none;
-    flex: 1;
-
-    &:focus {
-      outline: none;
+  &__search {
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    @include desktop {
+      width: 30%;
     }
-  }
-
-  &--focused {
-    border-color: $primary-color;
     i {
-      color: $primary-color;
+      transition: color 0.2s ease;
+      opacity: 0.7;
+    }
+    input {
+      padding: 1rem;
+      border: none;
+      flex: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--focused {
+      border-color: $primary-color;
+      i {
+        color: $primary-color;
+      }
     }
   }
 }
@@ -99,5 +102,38 @@
   margin-top: 1rem;
   @include desktop {
     margin-top: 2rem;
+  }
+}
+
+.notFound {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  gap: 1rem;
+  i {
+    font-size: 5rem;
+    color: lighten($primary-color, 10%);
+    margin-bottom: 1rem;
+    @include tablet {
+      font-size: 8rem;
+    }
+  }
+
+  &__intro {
+    font-size: 1.4rem;
+    font-weight: 500;
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__term {
+    font-weight: 500;
+    font-size: 3rem;
+    color: lighten($primary-color, 10%);
+    @include tablet {
+      font-size: 4rem;
+    }
   }
 }

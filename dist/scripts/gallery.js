@@ -20,6 +20,15 @@ function showSearchResult(state) {
   const { search, types } = state;
   const element = gallery.querySelector(`.${resultCountClass}`);
   const count = list.childElementCount;
+  if (!count) {
+    list.innerHTML = ` 
+    <div class="notFound">
+      <i class= "fas fa-exclamation-triangle"></i>
+      <p class="notFound__intro">We looked high and low, but…</p>
+      <p class="notFound__term">"tester" isn't here!</p>
+    </div>
+  `;
+  }
   if ((!search && !types.length) || !count) {
     if (element) gallery.removeChild(element);
     return;
@@ -92,14 +101,14 @@ function buildCarElement(data) {
 
 // event listeners
 
-const searchInput = document.querySelector(".search input");
+const searchInput = document.querySelector(".gallery__search input");
 searchInput.addEventListener("input", (e) => {
   const search = e.target.value;
   filterState.state = { ...filterState.state, search };
 });
 
 const toggleSearchFocused = () => {
-  searchInput.parentElement.classList.toggle("search--focused");
+  searchInput.parentElement.classList.toggle("gallery__search--focused");
 };
 searchInput.addEventListener("focus", toggleSearchFocused);
 searchInput.addEventListener("blur", toggleSearchFocused);
