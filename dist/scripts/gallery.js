@@ -1,7 +1,6 @@
 const list = document.querySelector(".list");
 const gallery = document.querySelector(".gallery");
 const filterTypes = document.querySelector(".types");
-const vehicleTypes = [];
 
 const initialFilterState = { search: "", types: [] };
 
@@ -41,19 +40,16 @@ function showVehicles(state) {
   const newList = document.createElement("div");
   let { types, search } = state;
   search = search.trim().toLowerCase();
-  Object.entries(vehicles).forEach(([type, list]) => {
-    vehicleTypes.push(type);
-    list.forEach((item) => {
-      const { name, model } = item;
-      const isChosenType = !types.length || types.includes(type);
-      const isSearchedFor =
-        !search ||
-        name.toLowerCase().includes(search) ||
-        model.toLowerCase().includes(search);
-      const isVisible = isSearchedFor && isChosenType;
-      if (!isVisible) return;
-      newList.appendChild(buildCarElement({ ...item, type }));
-    });
+  vehiclesArr.forEach((v, index) => {
+    const { name, model, type } = v;
+    const isChosenType = !types.length || types.includes(type);
+    const isSearchedFor =
+      !search ||
+      name.toLowerCase().includes(search) ||
+      model.toLowerCase().includes(search);
+    const isVisible = isSearchedFor && isChosenType;
+    if (!isVisible) return;
+    newList.appendChild(buildCarElement({ ...v, index }));
   });
   list.innerHTML = newList.innerHTML;
 }
@@ -83,7 +79,7 @@ function showTypesList() {
 }
 
 function buildCarElement(data) {
-  const { model, name, type } = data;
+  const { model, name, type, index } = data;
   const div = document.createElement("div");
   const imgLink = `${model} ${name}`.replace(/\s+/g, "_").toUpperCase();
   div.innerHTML = `
@@ -93,7 +89,7 @@ function buildCarElement(data) {
             <p class="type">${model}</p>
             <p class="name">${name}</p>
             <p class="price">${allTypes[type].pricePerDay}£/day</p>
-            <a href="#" class="fetch">book now</a>
+            <a href="reserve.html?id=${index}" class="fetch">book now</a>
 `;
   div.classList.add("car", "car--card");
   return div;

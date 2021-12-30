@@ -88,26 +88,26 @@ body {
     display: flex;
   }
 }
-.nav .reserve {
+.nav__reserve {
   display: none;
   background-color: #6f00ff;
   padding: 1rem 2rem;
   text-transform: capitalize;
   border-radius: 5rem;
   font-size: 1.4rem;
-  color: white;
+  color: white !important;
   transition: all 0.2s ease;
 }
-.nav .reserve:hover {
+.nav__reserve:hover {
   background-color: #5900cc;
 }
 @media only screen and (min-width: 768px) {
-  .nav .reserve {
+  .nav__reserve {
     display: inline-block;
   }
 }
 @media only screen and (min-width: 992px) {
-  .nav .reserve {
+  .nav__reserve {
     padding: 1rem 3rem;
     font-weight: bold;
   }

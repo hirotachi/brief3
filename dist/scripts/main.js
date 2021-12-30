@@ -75,7 +75,12 @@ const vehicles = {
   camion,
   utilitaire,
 };
-
+const vehiclesArr = [];
+const vehicleTypes = [];
+Object.entries(vehicles).forEach(([type, list]) => {
+  vehicleTypes.push(type);
+  list.forEach((item) => vehiclesArr.push({ ...item, type }));
+});
 // setup links
 const links = document.querySelectorAll(".nav .link a");
 links.forEach((link) => {
