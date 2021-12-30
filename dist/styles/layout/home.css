@@ -53,21 +53,21 @@
   font-size: 1.6rem;
 }
 .car .fetch {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border: 1px solid #6f00ff;
   color: #6f00ff;
   transition: all 0.2s ease;
   border-radius: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 90%;
   margin-top: 0.5rem;
   cursor: pointer;
+  text-align: center;
   text-transform: capitalize;
 }
 @media only screen and (min-width: 992px) {
   .car .fetch {
     margin-top: 1rem;
+    width: 60%;
   }
 }
 .car .fetch:hover {

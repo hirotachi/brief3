@@ -52,17 +52,19 @@
   }
 
   .fetch {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     border: 1px solid $primary-color;
     color: $primary-color;
     transition: all 0.2s ease;
     border-radius: 0.5rem;
-    width: fit-content;
+    width: 90%;
     margin-top: 0.5rem;
     cursor: pointer;
+    text-align: center;
     text-transform: capitalize;
     @include desktop {
       margin-top: 1rem;
+      width: 60%;
     }
 
     &:hover {
