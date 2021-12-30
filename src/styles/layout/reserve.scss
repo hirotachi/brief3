@@ -17,9 +17,12 @@
     border-radius: 1rem;
     .info {
       position: relative;
-      height: 16rem;
+      height: 20rem;
       font-weight: bold;
       text-transform: capitalize;
+      @include tablet {
+        height: 25rem;
+      }
       &__type {
         text-transform: uppercase;
         font-size: 2rem;
@@ -36,23 +39,17 @@
 
       &__preview {
         position: absolute;
-        bottom: -10rem;
+        bottom: -5rem;
         right: 50%;
         transform: translateX(50%);
-        width: 35rem;
-        height: 25rem;
+        width: 25rem;
+        height: 20rem;
         @include tablet {
-          right: -2rem;
+          right: 0;
           transform: unset;
-          bottom: -12rem;
+          bottom: -5rem;
           width: 45rem;
           height: 35rem;
-        }
-        @include desktop {
-          width: 50rem;
-          height: 35rem;
-          right: -5rem;
-          bottom: -12rem;
         }
 
         img {
