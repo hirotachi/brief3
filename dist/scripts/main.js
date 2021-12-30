@@ -75,3 +75,15 @@ const vehicles = {
   camion,
   utilitaire,
 };
+
+// setup links
+const links = document.querySelectorAll(".nav .link a");
+links.forEach((link) => {
+  const url = document.URL;
+  const route = link.href;
+  const file = route === "home" ? "index.html" : route;
+  const isCurrent = url.includes(file);
+  if (isCurrent) {
+    link.classList.add("link--active");
+  }
+});

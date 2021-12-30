@@ -25,7 +25,7 @@ function showSearchResult(state) {
     <div class="notFound">
       <i class= "fas fa-exclamation-triangle"></i>
       <p class="notFound__intro">We looked high and low, but…</p>
-      <p class="notFound__term">"tester" isn't here!</p>
+      <p class="notFound__term">"${search}" isn't here!</p>
     </div>
   `;
   }

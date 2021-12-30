@@ -45,7 +45,8 @@
     .link {
       transition: all 0.2s ease;
       font-weight: bold;
-      &:hover {
+      &:hover,
+      &--active {
         color: $primary-color;
       }
 

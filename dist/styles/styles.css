@@ -72,7 +72,7 @@ body {
   transition: all 0.2s ease;
   font-weight: bold;
 }
-.nav .links .link:hover {
+.nav .links .link:hover, .nav .links .link--active {
   color: #6f00ff;
 }
 .nav .links .link:before {
