@@ -1,0 +1,93 @@
+@use "../abstracts" as *;
+@use "../components/car";
+
+.gallery {
+  padding: 0 $mobile-spacing;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    padding: 0 $tablet-spacing;
+  }
+  @include desktop {
+    padding: 0 $desktop-spacing;
+  }
+  .intro {
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+.search {
+  border: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  @include desktop {
+    width: 30%;
+  }
+  i {
+    transition: color 0.2s ease;
+    opacity: 0.7;
+  }
+  input {
+    padding: 1rem;
+    border: none;
+    flex: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--focused {
+    border-color: $primary-color;
+    i {
+      color: $primary-color;
+    }
+  }
+}
+
+.types {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  user-select: none;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  .type {
+    padding: 1rem;
+    border: 1px solid $border-color;
+    transition: all 0.2s ease;
+    border-radius: 5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+.list {
+  display: grid;
+  gap: 2rem;
+  grid-row-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem 0;
+  @include tablet {
+    grid-row-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

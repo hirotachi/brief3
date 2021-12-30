@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../components/car";
 
 .home {
   padding: 0 $mobile-spacing;
@@ -131,64 +132,64 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    .car {
-      font-size: 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
-
-      .preview {
-        width: 16rem;
-        height: 10rem;
-        @include tablet {
-          width: 18rem;
-          height: 12rem;
-        }
-        @include desktop {
-          width: 22rem;
-          height: 15rem;
-        }
-
-        img {
-          @include size(100%);
-          object-fit: contain;
-        }
-      }
-
-      .type {
-        opacity: 0.8;
-        font-weight: bold;
-      }
-
-      .name {
-        font-weight: 900;
-        text-transform: capitalize;
-        font-size: 1.6rem;
-      }
-
-      .price {
-      }
-
-      .fetch {
-        padding: 0.5rem 1rem;
-        border: 1px solid $primary-color;
-        color: $primary-color;
-        transition: all 0.2s ease;
-        border-radius: 0.5rem;
-        width: fit-content;
-        margin-top: 0.5rem;
-        cursor: pointer;
-        text-transform: capitalize;
-        @include desktop {
-          margin-top: 1rem;
-        }
-
-        &:hover {
-          color: white;
-          background-color: $primary-color;
-        }
-      }
-    }
+    //.car {
+    //  font-size: 1.4rem;
+    //  display: flex;
+    //  flex-direction: column;
+    //  gap: 0.5rem;
+    //  align-items: center;
+    //
+    //  .preview {
+    //    width: 16rem;
+    //    height: 10rem;
+    //    @include tablet {
+    //      width: 18rem;
+    //      height: 12rem;
+    //    }
+    //    @include desktop {
+    //      width: 22rem;
+    //      height: 15rem;
+    //    }
+    //
+    //    img {
+    //      @include size(100%);
+    //      object-fit: contain;
+    //    }
+    //  }
+    //
+    //  .type {
+    //    opacity: 0.8;
+    //    font-weight: bold;
+    //  }
+    //
+    //  .name {
+    //    font-weight: 900;
+    //    text-transform: capitalize;
+    //    font-size: 1.6rem;
+    //  }
+    //
+    //  .price {
+    //  }
+    //
+    //  .fetch {
+    //    padding: 0.5rem 1rem;
+    //    border: 1px solid $primary-color;
+    //    color: $primary-color;
+    //    transition: all 0.2s ease;
+    //    border-radius: 0.5rem;
+    //    width: fit-content;
+    //    margin-top: 0.5rem;
+    //    cursor: pointer;
+    //    text-transform: capitalize;
+    //    @include desktop {
+    //      margin-top: 1rem;
+    //    }
+    //
+    //    &:hover {
+    //      color: white;
+    //      background-color: $primary-color;
+    //    }
+    //  }
+    //}
   }
 }

@@ -1,5 +1,3 @@
-console.log("hello world");
-
 // nav handling
 const navOpenBtn = document.querySelector(".open");
 const navCloseBtn = document.querySelector(".close");
@@ -19,7 +17,7 @@ const optionsPercentage = {
   automatic: 19,
 };
 
-const types = {
+const allTypes = {
   compact: {
     manual: true,
     essence: true,

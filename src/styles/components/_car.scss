@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+
+.car {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  &--card {
+    border: 1px solid $border-color;
+    padding: 2rem 0;
+    border-radius: 0.5rem;
+    @include tablet {
+      padding: 2rem 1rem;
+    }
+    @include desktop {
+      padding: 2rem;
+    }
+  }
+
+  .preview {
+    width: 16rem;
+    height: 10rem;
+    @include tablet {
+      width: 18rem;
+      height: 12rem;
+    }
+    @include desktop {
+      width: 22rem;
+      height: 15rem;
+    }
+
+    img {
+      @include size(100%);
+      object-fit: contain;
+    }
+  }
+
+  .type {
+    opacity: 0.8;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .name {
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+  }
+
+  .price {
+  }
+
+  .fetch {
+    padding: 0.5rem 1rem;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    transition: all 0.2s ease;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    @include desktop {
+      margin-top: 1rem;
+    }
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+}
