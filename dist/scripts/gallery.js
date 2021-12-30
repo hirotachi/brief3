@@ -20,8 +20,8 @@ function showSearchResult(state) {
   const { search, types } = state;
   const element = gallery.querySelector(`.${resultCountClass}`);
   const count = list.childElementCount;
-  if ((!search && !types.length && element) || !count) {
-    gallery.removeChild(element);
+  if ((!search && !types.length) || !count) {
+    if (element) gallery.removeChild(element);
     return;
   }
   gallery.insertBefore(resultCount, list);
