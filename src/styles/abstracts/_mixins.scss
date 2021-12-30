@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // text mixins
 @mixin maxTextWidth($max, $min: null) {
   white-space: nowrap;
