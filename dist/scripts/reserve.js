@@ -6,6 +6,11 @@ const infoType = reserve.querySelector(".info__type");
 const infoName = reserve.querySelector(".info__name");
 const infoImg = reserve.querySelector(".info__preview img");
 
+const startDateInput = document.querySelector("#start");
+const endDateInput = document.querySelector("#end");
+
+const fuel = document.querySelector(".fuel");
+
 const { type, model, name } = vehiclesArr[id] ?? vehiclesArr[0];
 const img = `${model} ${name}`.replace(/\s+/g, "_").toUpperCase();
 
@@ -14,13 +19,15 @@ infoType.textContent = `${type} - ${model}`;
 infoImg.src = `assets/vehicles/${img}.png`;
 infoImg.alt = `${model} ${name}`;
 
-const fuel = document.querySelector(".fuel");
-const startDateInput = document.querySelector("#start");
-const endDateInput = document.querySelector("#end");
+const fuelTypes = ["electric", "essence", "diesel", "hybrid"];
+const vehicleType = allTypes[type];
+const fuelSelect = document.createElement("select");
+const availableOptions = fuelTypes.filter((t) => vehicleType[t]);
+fuelSelect.disabled = availableOptions.length <= 1;
 
 const checkoutState = new State(
   {
-    fuel: undefined,
+    fuel: availableOptions[0],
     duration: 1,
     startDate: new Date(),
     endDate: getAfterDays(new Date(), 1),
@@ -32,6 +39,7 @@ handleStateChange(checkoutState.state);
 function handleStateChange(state) {
   setEndDate(state);
   checkoutState.state.duration = diffInDays(state.startDate, state.endDate);
+  console.log(state);
   //   change summary text to indicate new stuff
 }
 
@@ -40,8 +48,11 @@ function getAfterDays(date, days = 1) {
   return new Date(copy.setHours(copy.getHours() + days * 24));
 }
 
+// duration handlers
+
 startDateInput.min = parseDate(checkoutState.state.startDate);
 startDateInput.value = parseDate(checkoutState.state.startDate);
+endDateInput.value = parseDate(checkoutState.state.endDate);
 
 function setEndDate(state) {
   const { startDate, endDate } = state;
@@ -54,9 +65,18 @@ function setEndDate(state) {
   checkoutState.state.endDate = nextDay;
 }
 
-// build fuel select
-// build gear box options
-// duration input
+// fuel handlers
+
+availableOptions.forEach((o) => {
+  const option = document.createElement("option");
+  option.value = o;
+  option.textContent = o;
+  fuelSelect.appendChild(option);
+});
+fuelSelect.addEventListener("change", (e) => {
+  checkoutState.state = { ...checkoutState.state, fuel: e.target.value };
+});
+fuel.appendChild(fuelSelect);
 
 // events listeners
 const handleDateChange = (e) => {
