@@ -63,8 +63,26 @@
 
 .main {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .summary {
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $border-color;
+  }
+}
+
+.inputs {
   &__title {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     font-weight: bold;
+  }
+  .fuel {
+  }
+  .start {
+  }
+  .end {
   }
 }
