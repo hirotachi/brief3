@@ -62,7 +62,7 @@ function handleStateChange(state) {
   sumDurationData.textContent = `${duration} days`;
   sumPricePerDayData.textContent = `${price}£`;
   sumTransmissionData.textContent = transmission;
-  sumTotalData.textContent = `${total}£`;
+  sumTotalData.textContent = `${total.toFixed(2)}£`;
 }
 
 function getAfterDays(date, days = 1) {
