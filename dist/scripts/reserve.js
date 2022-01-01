@@ -58,11 +58,15 @@ function handleStateChange(state) {
   const fuelBonus = calcPercentage(fuel);
   const total = duration * (price + transBonus + fuelBonus);
   //   change summary text to indicate new stuff
-  sumFuelData.textContent = fuel;
-  sumDurationData.textContent = `${duration} days`;
-  sumPricePerDayData.textContent = `${price}£`;
-  sumTransmissionData.textContent = transmission;
-  sumTotalData.textContent = `${total.toFixed(2)}£`;
+  sumFuelData.innerHTML = `${fuel} <i>(+${getPercentage(fuel)}%)</i>`;
+  sumDurationData.innerHTML = `${duration} days`;
+  sumPricePerDayData.innerHTML = `${price}£`;
+  sumTransmissionData.innerHTML = `${transmission} ${
+    !getPercentage(transmission)
+      ? ""
+      : `<i>(+${getPercentage(transmission)}%)</i>`
+  }`;
+  sumTotalData.innerHTML = `${total.toFixed(2)}£`;
 }
 
 function getAfterDays(date, days = 1) {
