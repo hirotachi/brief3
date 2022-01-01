@@ -37,5 +37,9 @@ function parseDate(date) {
 
 function diffInDays(startDate, endDate) {
   const diffInTime = endDate.getTime() - startDate.getTime();
-  return Math.round(diffInTime / (1000 * 3600 * 24));
+  let result = diffInTime / (1000 * 3600 * 24);
+  const reminder = result % 1;
+  result += !reminder ? reminder : 1 - reminder;
+
+  return result;
 }

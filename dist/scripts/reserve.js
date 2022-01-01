@@ -25,6 +25,12 @@ const fuelSelect = document.createElement("select");
 const availableOptions = fuelTypes.filter((t) => vehicleType[t]);
 fuelSelect.disabled = availableOptions.length <= 1;
 
+const sumFuelData = document.querySelector(".fuelType .data");
+const sumPricePerDayData = document.querySelector(".price .data");
+const sumTransmissionData = document.querySelector(".transmission .data");
+const sumDurationData = document.querySelector(".duration .data");
+const sumTotalData = document.querySelector(".total .data");
+
 const checkoutState = new State(
   {
     fuel: availableOptions[0],
@@ -39,8 +45,24 @@ handleStateChange(checkoutState.state);
 function handleStateChange(state) {
   setEndDate(state);
   checkoutState.state.duration = diffInDays(state.startDate, state.endDate);
-  console.log(state);
+  const { duration, fuel } = state;
+  const price = vehicleType.pricePerDay;
+  function getPercentage(keyName) {
+    return optionsPercentage[keyName] ?? 0;
+  }
+  function calcPercentage(keyName) {
+    return (price * getPercentage(keyName)) / 100;
+  }
+  const transmission = vehicleType.manual ? "manual" : "automatic";
+  const transBonus = calcPercentage(transmission);
+  const fuelBonus = calcPercentage(fuel);
+  const total = duration * (price + transBonus + fuelBonus);
   //   change summary text to indicate new stuff
+  sumFuelData.textContent = fuel;
+  sumDurationData.textContent = `${duration} days`;
+  sumPricePerDayData.textContent = `${price}£`;
+  sumTransmissionData.textContent = transmission;
+  sumTotalData.textContent = `${total}£`;
 }
 
 function getAfterDays(date, days = 1) {
