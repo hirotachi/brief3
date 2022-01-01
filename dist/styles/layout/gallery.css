@@ -1,0 +1,225 @@
+.car {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.car--card {
+  border: 1px solid rgba(34, 33, 31, 0.2);
+  padding: 2rem 0;
+  border-radius: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .car--card {
+    padding: 2rem 1rem;
+  }
+}
+.car .preview {
+  width: 16rem;
+  height: 10rem;
+}
+@media only screen and (min-width: 768px) {
+  .car .preview {
+    width: 18rem;
+    height: 12rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .car .preview {
+    width: 22rem;
+    height: 15rem;
+  }
+}
+.car .preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.car .type {
+  opacity: 0.8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.car .name {
+  font-weight: 900;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.car .fetch {
+  padding: 0.5rem 0;
+  border: 1px solid #6f00ff;
+  color: #6f00ff;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+  width: 90%;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 992px) {
+  .car .fetch {
+    margin-top: 1rem;
+    width: 60%;
+  }
+}
+.car .fetch:hover {
+  color: white;
+  background-color: #6f00ff;
+}
+
+.gallery {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .gallery {
+    padding: 0 8%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .gallery {
+    padding: 0 10%;
+  }
+}
+.gallery__intro {
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .gallery__intro {
+    text-align: left;
+    font-size: 4rem;
+  }
+}
+.gallery__intro span {
+  color: #6f00ff;
+}
+.gallery__search {
+  border: 1px solid rgba(34, 33, 31, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+@media only screen and (min-width: 992px) {
+  .gallery__search {
+    width: 30%;
+  }
+}
+.gallery__search i {
+  transition: color 0.2s ease;
+  opacity: 0.7;
+}
+.gallery__search input {
+  padding: 1rem;
+  border: none;
+  flex: 1;
+}
+.gallery__search input:focus {
+  outline: none;
+}
+.gallery__search--focused {
+  border-color: #6f00ff;
+}
+.gallery__search--focused i {
+  color: #6f00ff;
+}
+
+.types {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.types .type {
+  padding: 1rem;
+  border: 1px solid rgba(34, 33, 31, 0.2);
+  transition: all 0.2s ease;
+  border-radius: 5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+}
+.types .type--active, .types .type:hover {
+  border-color: #6f00ff;
+  color: #6f00ff;
+}
+
+.list {
+  display: grid;
+  gap: 2rem;
+  grid-row-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .list {
+    grid-row-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.result {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .result {
+    margin-top: 2rem;
+  }
+}
+
+.notFound {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
+  gap: 1rem;
+}
+.notFound i {
+  font-size: 5rem;
+  color: #8c33ff;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .notFound i {
+    font-size: 8rem;
+  }
+}
+.notFound__intro {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .notFound__intro {
+    font-size: 2rem;
+  }
+}
+.notFound__term {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #8c33ff;
+}
+@media only screen and (min-width: 768px) {
+  .notFound__term {
+    font-size: 4rem;
+  }
+}
