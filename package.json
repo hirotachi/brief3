@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"dev": "live-server dist"
+		"dev": "live-server docs"
 	},
 	"devDependencies": {
 		"gulp": "^4.0.2",

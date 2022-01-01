@@ -11,7 +11,7 @@ function buildStyles() {
         cascade: false,
       })
     )
-    .pipe(gulp.dest("./dist/styles"));
+    .pipe(gulp.dest("./docs/styles"));
 }
 exports.buildStyles = buildStyles;
 
