@@ -10,11 +10,6 @@
   padding: 2rem 0;
   border-radius: 0.5rem;
 }
-@media only screen and (min-width: 768px) {
-  .car--card {
-    padding: 2rem 1rem;
-  }
-}
 .car .preview {
   width: 16rem;
   height: 10rem;

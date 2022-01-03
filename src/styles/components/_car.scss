@@ -10,9 +10,6 @@
     border: 1px solid $border-color;
     padding: 2rem 0;
     border-radius: 0.5rem;
-    @include tablet {
-      padding: 2rem 1rem;
-    }
   }
 
   .preview {
